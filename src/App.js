@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// App Component: Main component rendering TaskInput and TaskList
+import React from "react";
+import TaskInput from "./Components/TaskInput/TaskInput";
+import TaskList from "./Components/TaskList/TaskList";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="heading">To Do List</h1>
+      <TaskInput />
+      <TaskList />
     </div>
   );
-}
+};
 
 export default App;
